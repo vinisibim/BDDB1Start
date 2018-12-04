@@ -35,7 +35,23 @@ public class ExercicioStringTeste {
 	@Test
 	public void deveRetornarAs4PrimeirasLetrasDoNome() {
 		ExercicioString nome = new ExercicioString();
-		String letras = nome.primeirasLetrasDoNome("vinicius luiz silva sibin");
-		Assert.assertNotEquals("vini", letras);
+		String letras = nome.primeirasLetrasDoNome("vinicius");
+		Assert.assertEquals("vini", letras);
+	}
+	
+	@Test
+	public void deveRetornarAPartirDa3LetrasDoNome() {
+		ExercicioString nome = new ExercicioString();
+		String letras = nome.APartirDa3LetrasDoNome("vinicius");
+		Assert.assertEquals("icius", letras);
+		//System.out.println(letras);
+	}
+	
+	@Test
+	public void deveRetornarAsUltimasLetrasDoNome() {
+		ExercicioString nome = new ExercicioString();
+		String letras = nome.UltimasLetrasDoNome("vinicius luiz");
+		Assert.assertEquals("luiz", letras);
+		//System.out.println(letras);
 	}
 }
