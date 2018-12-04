@@ -2,6 +2,8 @@ package br.com.db1.start.aula10;
 
 import java.util.stream.IntStream;
 
+import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
+
 public class ExercicioString {
 
 	// 1 - FUM que receba um texto e devolva ele em LETRAS MAIUSCULAS
@@ -50,21 +52,47 @@ public class ExercicioString {
 		int qntLetras = nome.length();
 		qntLetras = qntLetras - 4;
 		String aux = nome.substring(qntLetras);
-		System.out.println(aux);
+		// System.out.println(aux);
 		return aux;
 	}
 
 	// 9 - FUM que receba o seu nome completo e substitua o seu primeiro nome por
 	// ALUNO/ALUNA
 	public String SubstituiPrimeironome(String nome) {
+		int espaco = nome.indexOf(' ');
 		String aluno = "Aluno";
 		String aluna = "Aluna";
-		String sobrenome = 
-		String restoNome = nome.substring();
+		String restoNome = nome.substring(espaco);
+		return aluno + restoNome;
 	}
+
 	// 10 - FUM que receba o seguinte texto "banana, maçã, melancia" e exiba o texto
 	// separadamente.
-	// 11 - FUM que receba um texto e exiba quantas vogais tem no texto
-	// 12 - FUM que receba um texto e devolva ele invertido
+	public String separaPalavras(String nome) {
+		String separaPalavra[] = nome.split(",");
+		// System.out.println(separaPalavra[0]);
+		// System.out.println(separaPalavra[1]);
+		// System.out.println(separaPalavra[2]);
+		// System.out.println(nome);
+		return nome;
+	}
 
+	// 11 - FUM que receba um texto e exiba quantas vogais tem no texto
+	public int contaVogais(String texto) {
+		// return valor.replace(","", "" ");
+		int vogais = 0, i = 0;
+		texto.toLowerCase();
+		for (i = 0; i < texto.length(); i++){
+			char c = texto.charAt(i);
+			if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') 
+				vogais++;	
+		}
+		//System.out.println(vogais);
+		return vogais;
+	}
+
+	// 12 - FUM que receba um texto e devolva ele invertido
+	public String retornarValorInvertido(String valor) {
+		return new StringBuilder(valor).reverse().toString();
+	}
 }

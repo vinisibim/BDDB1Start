@@ -54,4 +54,38 @@ public class ExercicioStringTeste {
 		Assert.assertEquals("luiz", letras);
 		//System.out.println(letras);
 	}
+	
+	@Test
+	public void deveSubstituirPrimeiroNome() {
+		ExercicioString nome = new ExercicioString();
+		String letras = nome.SubstituiPrimeironome("vinicius luiz");
+		Assert.assertEquals("Aluno luiz", letras);
+		//System.out.println(letras);
+	}
+	
+	public void deveSepararAsPalavras() {
+		
+		
+		ExercicioString palavra = new ExercicioString();
+		String letras = palavra.separaPalavras("banana, maçã, melancia");
+		Assert.assertEquals("banana", letras);
+		Assert.assertEquals("maçã", letras);
+		Assert.assertEquals("melancia", letras);
+		System.out.println(letras);
+	}
+	
+	@Test
+	public void deveContarTotalDeVogais() {
+		ExercicioString vogais = new ExercicioString();
+		int palavra = vogais.contaVogais("aeou");
+		Assert.assertEquals("4", palavra);
+		System.out.println(palavra);
+	}
+	
+	@Test
+	public void deveRetornarValorInvertido() {
+	ExercicioString texto = new ExercicioString();
+	String textoReverso = texto.retornarValorInvertido("vinicius");
+	Assert.assertEquals("suiciniv", textoReverso);
+	}
 }
