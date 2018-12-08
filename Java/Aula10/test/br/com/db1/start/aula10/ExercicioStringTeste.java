@@ -78,7 +78,7 @@ public class ExercicioStringTeste {
 	public void deveContarTotalDeVogais() {
 		ExercicioString vogais = new ExercicioString();
 		int palavra = vogais.contaVogais("aeou");
-		Assert.assertEquals("4", palavra);
+		Assert.assertEquals(4, palavra);
 		System.out.println(palavra);
 	}
 	

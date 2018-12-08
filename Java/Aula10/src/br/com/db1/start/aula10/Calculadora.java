@@ -1,15 +1,4 @@
 package br.com.db1.start.aula10;
-
-/*
-1 - FUM que some dois números
-2 - FUM que subtraia dois números
-3 - FUM que multiplique dois números 
-4 - FUM que divida dois números
-5 - FUM que diga se o número é par
-6 - FUM que receba dois números e diga qual é o maior
-7 - FUM que a partir de um valor inicial, mostre os números de ímpares até 100. 
-*/
-
 public class Calculadora {
 	// 1 - FUM que some dois números
 	public int somaDoisNumeros(Integer num1, Integer num2) {

@@ -87,7 +87,7 @@ public class ExercicioString {
 			if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') 
 				vogais++;	
 		}
-		//System.out.println(vogais);
+		System.out.println(vogais);
 		return vogais;
 	}
 
