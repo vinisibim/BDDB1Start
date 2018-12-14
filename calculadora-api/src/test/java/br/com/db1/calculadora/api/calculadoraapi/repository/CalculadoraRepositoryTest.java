@@ -1,6 +1,8 @@
 package br.com.db1.calculadora.api.calculadoraapi.repository;
 
-import java.awt.List;
+
+
+import java.util.List;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -16,14 +18,10 @@ import br.com.db1.calculadora.api.calculadoraapi.model.Operacao;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CalculadoraRepositoryTest {
-/*
+
 	@Autowired
 	private CalculadoraRepository calculadoraRepository;
 
-	@After
-	public void after() {
-		calculadoraRepository.deleteAll();
-	}
 
 	@Test
 	public void deveSalvarUmNovoCalculo() {
@@ -32,9 +30,13 @@ public class CalculadoraRepositoryTest {
 		
 		List<Calculadora> buscar = calculadoraRepository.findAll();
 		
-		Assert.assertEquals(calculadora.getNome(), cidadeSalva.getNome());
+		Calculadora resultado = buscar.get(0);
+		
+		
+		
+		Assert.assertEquals(resultado.getResultado(), calculadora.getResultado());
 		
  	
 	}
-*/
+
 }
